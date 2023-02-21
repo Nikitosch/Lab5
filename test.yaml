@@ -1,0 +1,51 @@
+---
+1:
+  id: 999999999
+  name: ANAKIN
+  Coordinates:
+       - x : -500.0
+       - y : 100
+  creationDate: 1993-02-20
+  price: 1.0E7
+  partNumber: 1111111111111111111111111111111
+  UnitOfMeasure: MILLILITERS
+  Person:
+       - name : OBIWAN
+       - height : 999
+       - weight : 0
+       - Color : RED
+---
+---
+2:
+  id: 692559
+  name: PADME
+  Coordinates:
+       - x : 0.0
+       - y : 0
+  creationDate: 2023-02-20
+  price: 1.0E10
+  partNumber: 5555555555555555555555555555
+  UnitOfMeasure: GRAMS
+  Person:
+       - name : AMIDALA
+       - height : 180
+       - weight : 50
+       - Color : BLACK
+---
+---
+3:
+  id: 0000000000
+  name: DARTH
+  Coordinates:
+       - x : 100.0
+       - y : 100
+  creationDate: 2023-02-21
+  price: 100.0
+  partNumber: 99999999999999999999999
+  UnitOfMeasure: SQUARE_METERS
+  Person:
+       - name : VADER
+       - height : 1000
+       - weight : 2000
+       - Color : BLACK
+---

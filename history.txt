@@ -1,0 +1,14 @@
+exit
+exit
+help
+exit
+help
+info
+show
+add
+print_descending
+help
+show
+info
+history
+exit
