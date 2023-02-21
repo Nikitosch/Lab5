@@ -1,7 +1,4 @@
 exit
-exit
-help
-exit
 help
 info
 show
@@ -11,4 +8,7 @@ help
 show
 info
 history
+exit
+exit
+show
 exit

@@ -47,6 +47,7 @@ public class Main {
 
             } catch (IOException e) {
                 if (e.getMessage().equals("Программа завершила работу, всего хорошего!")){
+                    System.out.println(e.getMessage());
                     input = "exit";
                     loader.historyMaker("exit");
                 }
