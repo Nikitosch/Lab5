@@ -31,12 +31,12 @@ public class Show implements Command {
             System.out.println("  price: " + element.getPrice());
             System.out.println("  partNumber: " + element.getPartNumber());
             System.out.println("  UnitOfMeasure: " + element.getUnitOfMeasure());
-            Person owner = element.getOwner();
+            Person owner = element.getPerson();
             System.out.println("  Person:");
-            System.out.println("       - name : " + owner.getPersonName());
-            System.out.println("       - height : " + owner.getPersonHeight());
-            System.out.println("       - weight : " + owner.getPersonWeight());
-            System.out.println("       - Color : " + owner.getPersonEyeColor());
+            System.out.println("       - name : " + owner.getName());
+            System.out.println("       - height : " + owner.getHeight());
+            System.out.println("       - weight : " + owner.getWeight());
+            System.out.println("       - Color : " + owner.getEyeColor());
             System.out.println("----------");
         }
     }

@@ -1,8 +1,3 @@
-exit
-help
-info
-show
-add
 print_descending
 help
 show
@@ -10,5 +5,10 @@ info
 history
 exit
 exit
+show
+exit
+exit
+show
+show
 show
 exit

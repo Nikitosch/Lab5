@@ -1,14 +1,13 @@
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import Commands.Command;
+import MajorClasses.CommandMap;
+import MajorClasses.Loader;
+import MajorClasses.Product;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.List;
-
-import Commands.Command;
-import MajorClasses.*;
 
 //Запуск через терминал ))
 // java -cp out\production\Lab5 Main test.yaml

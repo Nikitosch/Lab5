@@ -6,33 +6,33 @@ public class Person {
     private long weight; //Значение поля должно быть больше 0
     private Color eyeColor; //Поле не может быть null
 
-    public String getPersonName() {
+    public String getName() {
         return this.name;
     }
 
-    public void setPersonName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public long getPersonHeight() {
+    public long getHeight() {
         return this.height;
     }
 
-    public void setPersonHeight(long height) {
+    public void setHeight(long height) {
         this.height = height;
     }
 
-    public long getPersonWeight() {
+    public long getWeight() {
         return this.weight;
     }
 
-    public void setPersonWeight(long weight) {
+    public void setWeight(long weight) {
         this.weight = weight;
     }
-    public Color getPersonEyeColor (){
+    public Color getEyeColor (){
         return this.eyeColor;
     }
-    public void setPersonEyeColor (Color eyeColor){
+    public void setEyeColor (Color eyeColor){
         this.eyeColor = eyeColor;
     }
 }

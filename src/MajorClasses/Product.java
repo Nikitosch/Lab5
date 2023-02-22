@@ -55,10 +55,10 @@ public class Product {
     public void setUnitOfMeasure (UnitOfMeasure unitOfMeasure){
         this.unitOfMeasure = unitOfMeasure;
     }
-    public Person getOwner (){
+    public Person getPerson (){
         return this.owner;
     }
-    public void setOwner (Person owner){
+    public void setPerson (Person owner){
         this.owner = owner;
     }
 

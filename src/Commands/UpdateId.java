@@ -24,6 +24,6 @@ public class UpdateId implements Command {
 
     @Override
     public void addArgs(ArrayList<String> arr) {
-
+        this.arrArgs = arr;
     }
 }

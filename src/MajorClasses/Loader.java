@@ -70,21 +70,21 @@ public class Loader {
 
                 line = reader.readLine().replaceAll("\\s+", "").split(":");
                 value = line[1]; // name
-                owner.setPersonName(value);
+                owner.setName(value);
 
                 line = reader.readLine().replaceAll("\\s+", "").split(":");
                 value = line[1]; // height
-                owner.setPersonHeight(Long.parseLong(value));
+                owner.setHeight(Long.parseLong(value));
 
                 line = reader.readLine().replaceAll("\\s+", "").split(":");
                 value = line[1]; // weight
-                owner.setPersonHeight(Long.parseLong(value));
+                owner.setHeight(Long.parseLong(value));
 
                 line = reader.readLine().replaceAll("\\s+", "").split(":");
                 value = line[1]; // Color
-                owner.setPersonEyeColor(Color.valueOf(value));
+                owner.setEyeColor(Color.valueOf(value));
 
-                product.setOwner(owner);
+                product.setPerson(owner);
 
                 reader.readLine(); // ---
 

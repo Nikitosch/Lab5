@@ -122,9 +122,9 @@ public class Setter {
                 System.out.println("Числа должны быть больше нуля!");
             } else {
                 pass = true;
-                npc.setPersonName(input[0]);
-                npc.setPersonHeight(Long.parseLong(input[1]));
-                npc.setPersonWeight(Long.parseLong(input[2]));
+                npc.setName(input[0]);
+                npc.setHeight(Long.parseLong(input[1]));
+                npc.setWeight(Long.parseLong(input[2]));
             }
         }
         System.out.println("Выберите цвет Глаза:\n" +
@@ -138,7 +138,7 @@ public class Setter {
             String color = reader.readLine();
             if (s.contains(color)) {
                 pass = true;
-                npc.setPersonEyeColor(Color.valueOf(color));
+                npc.setEyeColor(Color.valueOf(color));
             } else {
                 System.out.println("Вот это да! Попробуйте еще раз\nВыберите цвет Глаза:\n" +
                         "RED,\n" +
@@ -147,7 +147,7 @@ public class Setter {
                         "BROWN");
             }
         }
-        newProduct.setOwner(npc);
+        newProduct.setPerson(npc);
     }
 
     public void update(Product product, BufferedReader reader) throws IOException {
@@ -159,7 +159,7 @@ public class Setter {
         System.out.println("Чтобы прекратить, введите stop");
         System.out.println();
         while (true) {
-            ArrayList<String> splitOne = new ArrayList<>(Arrays.asList(reader.readLine().replaceAll("\\s+", "").split(":")));
+            ArrayList<String> splitOne = new ArrayList<>(Arrays.asList(reader.readLine().replaceAll("\\s*;", "").split(":")));
             if ("stop, exit".contains(splitOne.get(0))) throw new IOException("Сброс команды");
             if (splitOne.size() == 1) {
                 String[] str = splitOne.get(0).split("=");
@@ -177,19 +177,23 @@ public class Setter {
                 }
             } else if (splitOne.size() != 2) System.out.println("Ошибка ввода");
             else {
-                String type = splitOne.get(0); // ZAPARA DONT FORGET
-                ArrayList<String> splitTwo = new ArrayList<>(Arrays.asList(splitOne.get(1).split(","))); //[x=11,y=22]
+
+                String type = splitOne.get(0);
+                ArrayList<String> splitTwo = new ArrayList<>(Arrays.asList(splitOne.get(1).replaceAll(" ", "").split(","))); //[x=11,y=22]
+
                 if (!("Coordinates, Person".contains(type))) System.out.println("Какой-то мутный тип!!");
-                else if ("Coordinates".equals(type) && (!((splitTwo.get(0).split("=")[0]).equals("x")))
-                        || (!((splitTwo.get(1).split("=")[0]).equals("y")))) {
+
+                else if ("Coordinates".equals(type) && (!((splitTwo.get(0).split("=")[0]).equals("x"))
+                        || (!((splitTwo.get(1).split("=")[0]).equals("y"))))) {
+
                     System.out.println("У координат поля должны быть x или y");
-                } else if ("Person".equals(type) &&
-                        (!((splitTwo.get(0).split("=")[0].equals("name")))
-                                || !((splitTwo.get(1).split("=")[0].equals("height")))
-                                || !((splitTwo.get(2).split("=")[0].equals("weight")))
-                                || !((splitTwo.get(3).split("=")[0].equals("eyeColor")))))
-                    System.out.println("Вы ошиблись с Персоной ...");
-                else {
+
+                } else if ((("Person".equals(type))) && (((splitTwo.size() > 0) && !(splitTwo.get(0).split("=")[0].equals("name")))
+                            && ((splitTwo.size() > 1) && !(splitTwo.get(1).split("=")[0].equals("height")))
+                            && ((splitTwo.size() > 2) && !(splitTwo.get(2).split("=")[0].equals("weight")))
+                            && ((splitTwo.size() > 3) && !(splitTwo.get(3).split("=")[0].equals("eyeColor"))))){
+                        System.out.println("Вы ошиблись с Персоной ...");
+                    } else {
                     for (String elem : splitTwo) {
                         String[] elems = elem.split("=");
                         String name = elems[0], value = elems[1];

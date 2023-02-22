@@ -22,7 +22,7 @@ public class RemoveAllByOwner implements Command {
                 String inputName = arrArgs.get(0);
                 boolean flag = false;
                 for (Product elem : collection) {
-                    String name = elem.getOwner().getPersonName();
+                    String name = elem.getPerson().getName();
                     if (name.equals(inputName)){
                         collection.remove(elem);
                         flag = true;
